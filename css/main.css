@@ -78,10 +78,13 @@ h3::after{
 .about-me .about .name{
     display: flex;
     align-items: center;
-    @media (max-width:767px){
-        flex-direction: column;
-    } 
+
 }
+@media (max-width:767px){
+    .about-me .about .name{
+        flex-direction: column;
+    }
+} 
 .about-me .about .name .profileImg{
     width: 200px;
     height: 200px;
