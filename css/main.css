@@ -49,10 +49,10 @@ h3::after{
     transition: all .5s ease-in-out;
     position: relative;
     transform: rotate(.6deg);
-    @media (max-width:767px){
-        transform :none;
-    } 
+
+
 }
+
 #app .pin{
     position: absolute;
     top: -13px;
@@ -61,13 +61,16 @@ h3::after{
     transform: rotate(45deg);
     color: #3f47b5;
     text-shadow: 0 0 4px #3f47b5;
-    @media (max-width:767px){
-        display: none;
-    } 
-        
-    
-
 }
+@media (max-width:767px){
+    #app {
+
+        transform :none;
+    }
+    #app .pin{
+        display : none;
+    }
+} 
 .about-me{
     padding: 30px 20px;
 
