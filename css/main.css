@@ -1,0 +1,179 @@
+*{
+    font-family: 'Lexend', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+:root{
+    --mainColor : #0bafd1;
+    ---gray : #707070;
+}
+ul li{
+    margin-bottom: 5px;
+}
+h3,p{
+    width: fit-content;
+}
+p{
+    color: var(---gray);
+    line-height: 1.5;
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+h3{
+    position: relative;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+h3::after{
+    content: '';
+    position: absolute;
+    bottom: -7px;
+    left: 0;
+    width: 40%;
+    height: 2px;
+    background-color: var(--mainColor);
+}
+/*================== 
+-- About Me
+====================*/
+#app{
+    width: 80%;
+    box-shadow: 0px 0px 7px 1px #dbdbdb;
+    transition: all .5s ease-in-out;
+    position: relative;
+    transform: rotate(.6deg);
+    @media (max-width:767px){
+        transform :none;
+    } 
+}
+#app .pin{
+    position: absolute;
+    top: -13px;
+    left: 4px;
+    font-size: 22px;
+    transform: rotate(45deg);
+    color: #3f47b5;
+    text-shadow: 0 0 4px #3f47b5;
+    @media (max-width:767px){
+        display: none;
+    } 
+        
+    
+
+}
+.about-me{
+    padding: 30px 20px;
+
+}
+.about-me .about .name{
+    display: flex;
+    align-items: center;
+    @media (max-width:767px){
+        flex-direction: column;
+    } 
+}
+.about-me .about .name .profileImg{
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 6px;
+}
+.about-me .about .name img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.about-me .about .name p{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    margin-left: 3px;
+}
+.about-me .about .name p span:nth-of-type(1){
+    font-size: 30px;
+    text-transform: capitalize;
+}
+.about-me .about .name p span:nth-of-type(2){
+    font-size: 14px;
+    color: var(--mainColor)
+}
+.about-me .about .contacts ul{
+    list-style: none;
+    margin-top: 15px;
+}
+.about-me .about .contacts ul li{
+    color: var(---gray);
+}
+.about-me .about .contacts ul strong{
+    color: black;
+}
+.about-me .about .socials ul{
+    list-style: none;
+    display: flex;
+    gap: 10px;
+}
+.about-me .about .socials i{
+    font-size: 30px;
+    margin-top: 10px;
+
+    
+}
+.about-me .about .socials li:nth-of-type(1) i{color: rgb(3, 3, 3);}
+.about-me .about .socials li:nth-of-type(2) i{color:blue;}
+.about-me .aboutRight{
+    display: flex;
+    flex-direction: column;
+}
+.about-me .aboutRight .skills li{
+    color: var(---gray);
+    font-weight: 600;
+}
+.about-me .aboutRight .skills li::marker{
+    color: var(--mainColor);
+    text-shadow: 0px 0px 19px;
+}
+.about-me .aboutRight .projects a{
+    text-decoration: none;
+    background-color: #15115c05;
+    border-radius: 6px;
+    padding: 10px;
+    color: #2b67a7;
+    display: inline-flex;
+    text-shadow: 0px 0px 19px;
+}
+
+.about-me .aboutRight .languages p {
+    margin: 0;
+    color: black;
+    font-weight: 600;
+
+}
+.about-me .aboutRight .languages span {
+    font-size: 15px;
+    color: var(---gray);
+}
+@media (max-width:991px) {
+    #app{
+        width: 95%;
+    }
+
+}
+@media (max-width:767px) {
+    body{
+        display: block;
+    }
+    #app{
+        width: 100%;
+    }
+
+}
